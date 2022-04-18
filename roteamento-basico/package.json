@@ -1,0 +1,19 @@
+{
+  "name": "roteamento-basico",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "clear && node app",
+    "dev": "clear && nodemon app",
+    "clean": "rm -rf images scripts styles templates",
+    "scaffold": "mkdir images scripts styles templates && cd templates && mkdir src && cd .. && cd images && mkdir png jpg gif"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15"
+  }
+}
