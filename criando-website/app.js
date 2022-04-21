@@ -8,7 +8,6 @@ app.set("view engine", "pug");
 app.set("views", `${__dirname}`);
 
 // Adicionando Rotas (Controladoras)
-// Servir um HTML diretamente => má prática!
 app.get("/", (req, res) => {
   res.redirect("/home");
 });

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= titulo %></title>
+</head>
+<body>
+  <h1><%= titulo %></h1>
+
+  <% if(produtos.length) { %>
+  <table border="1">
+    <tr>
+      <td>Código</td>
+      <td>Nome</td>
+      <td>Preço</td>
+      <td>Quantidade</td>
+    </tr>
+    
+    <% 
+    produtos.forEach((produto) => {  
+      const { codigo, nome, preco, quant } = produto;
+    %>
+    <tr>
+      <td><%= codigo %></td>
+      <td><%= nome %></td>
+      <td><%= preco %></td>
+      <td><%= quant %></td>
+    </tr>
+    <% 
+    }); 
+    %>
+
+
+  </table>
+  <% } %>
+</body>
+</html>
