@@ -16,5 +16,11 @@ module.exports = { products: [
     price: 1700, 
     image: "images/p3.png",
     stars: 5
+  },
+  { 
+    name: "Camera Samsung", 
+    price: 3500, 
+    image: "images/p1.png",
+    stars: 4
   }
 ] }

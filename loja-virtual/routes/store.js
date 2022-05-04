@@ -11,4 +11,6 @@ module.exports = (app) => {
   app.get("/why-us", storeController.getWhyUs);
   
   app.get("/testemonial", storeController.getTestemonial);
+
+  app.get("/search", storeController.getSearch);
 }
