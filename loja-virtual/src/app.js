@@ -2,10 +2,11 @@
 const app = require("express")();
 
 // Config da Aplicação
-require("../config/store.js")(app);
+require("../config/store")(app);
 
 // Routes
-require("../routes/store.js")(app);
+require("../routes/store")(app);
+require("../routes/admin")(app);
 
 // Startup da Aplicação
 const PORT = process.env.PORT ?? 7000;

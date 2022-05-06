@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Add Product</title>
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.1.0/build/pure-min.css" integrity="sha384-yHIFVG6ClnONEA5yB5DJXfW2/KC173DIQrYoZMEtBvGzmf0PKiGyNEqe9N6BNDBH" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+  <div class="site-container">
+    <h1>Add Product</h1>
+
+    <form class="pure-form pure-form-aligned" action="/admin/add?submit=true" method="post">
+      <fieldset>
+          <div class="pure-control-group">
+              <label for="aligned-name">Name</label>
+              <input type="text" name="product" placeholder="Product Name" />
+              <span class="pure-form-message-inline">This is a required field.</span>
+          </div>
+          <div class="pure-control-group">
+              <label for="aligned-password">Image</label>
+              <input type="text" name="image" placeholder="Image Path" />
+              <span class="pure-form-message-inline">This is a required field.</span>
+          </div>
+          <div class="pure-control-group">
+            <label for="aligned-password">Price</label>
+            <input type="text" name="price" placeholder="0.00" />
+            <span class="pure-form-message-inline">This is a required field.</span>
+          </div>
+          <div class="pure-control-group">
+            <label for="aligned-password">Stars</label>
+            <input type="number" name="stars" placeholder="0" />
+            <span class="pure-form-message-inline">This is a required field.</span>
+          </div>
+
+          <div class="pure-controls">
+              <button type="submit" class="pure-button pure-button-primary">Add Product</button>
+          </div>
+      </fieldset>
+    </form>
+
+  </div>
+
+</body>
+</html>

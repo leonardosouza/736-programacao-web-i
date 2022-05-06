@@ -1,0 +1,11 @@
+body {
+  background-color: silver;
+}
+
+.site-container {
+  border: 1px solid black;
+  width: 50%;
+  margin: 0 auto;
+  background-color: white;
+  padding: 1em;
+}
