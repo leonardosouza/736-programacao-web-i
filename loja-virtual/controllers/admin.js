@@ -1,7 +1,8 @@
-const db = require("../infra/dbConnection")("infra/lojavirtual.db");
+const conn = require("../infra/dbConnection")("infra/lojavirtual.db");
+const productDAO = require("../dao/ProductDAO")(conn);
 
 exports.getProducts = (req, res) => {
-  res.end("ADMIN LIST!");
+  res.redirect("admin/add");
 };
 
 exports.addProduct = (req, res) => {
@@ -9,14 +10,7 @@ exports.addProduct = (req, res) => {
 };
 
 exports.saveProduct = (req, res) => {
-  const { product, image, price, stars } = req.body;
-
-  const sql = `INSERT INTO 
-                  products (name, image, price, stars) 
-               VALUES
-                  ('${product}', '${image}', ${price}, ${stars});`;
-
-  db.run(sql, (err) => {
+  productDAO.save(req.body, (err) => {
     if(err) res.end("Erro ao salvar os dados!");
     res.redirect("/admin/add?success=true");
   });

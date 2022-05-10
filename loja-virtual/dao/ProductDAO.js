@@ -15,8 +15,13 @@ class ProductDAO {
     this.db.all(`SELECT * FROM products WHERE ${field} LIKE '%${value}%';`, callback);
   }
 
-  save(callback) {
-    // this.db.run(`INSERT INTO products...`, callback);
+  save(data, callback) {
+    const { product, image, price, stars } = data;
+
+    this.db.run(`INSERT INTO 
+                    products (name, image, price, stars) 
+                 VALUES
+                    ('${product}', '${image}', ${price}, ${stars});`, callback);
   }
 
   update(callback) {
@@ -24,4 +29,4 @@ class ProductDAO {
   }
 }
 
-module.exports = ProductDAO;
+module.exports = (conn) => new ProductDAO(conn);

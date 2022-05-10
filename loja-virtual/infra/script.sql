@@ -26,3 +26,14 @@ CREATE TABLE testemonial (
 INSERT INTO testemonial (name, role, image, message) VALUES ('Simão', 'Publicitario', 'images/client.jpg', 'Essa loja vitual é muito boa');
 INSERT INTO testemonial (name, role, image, message) VALUES ('Arlindo', 'Bancario', 'images/client.jpg', 'Encontro tudo o que preciso');
 INSERT INTO testemonial (name, role, image, message) VALUES ('Sandoval', 'Eletricista', 'images/client.jpg', 'Melhor e-commerce!');
+
+
+UPDATE testemonial SET image = 'images/simao.png' WHERE id = 1;
+UPDATE testemonial SET image = 'images/arlindo.jpeg' WHERE id = 2;
+UPDATE testemonial SET image = 'images/sandoval.jpeg' WHERE id = 3;
+
+
+CREATE TABLE newsletter (
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	email TEXT NOT NULL UNIQUE
+);

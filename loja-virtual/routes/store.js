@@ -12,4 +12,6 @@ module.exports = (app) => {
   app.get("/products", storeController.getProducts);
 
   app.get("/search", storeController.searchProducts);
+
+  app.post("/newsletter/add", storeController.addEmail);
 }
